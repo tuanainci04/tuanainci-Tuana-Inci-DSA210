@@ -1,74 +1,154 @@
-# Tuana İnci DSA210 Term Project
-Volleyball Positional Impact Analysis
+# DSA210 Term Project  
+## Volleyball Positional Impact Analysis  
 
-## Introduction
-This project analyzes how different **player positions** contribute to **team success** in professional **women’s volleyball**.  
-The focus is on the **top four national teams** that reached the **semifinals of the 2025 FIVB Volleyball Nations League (VNL)** — **Italy**, **Brazil**, **Poland**, and **Japan**.  
-By studying detailed **player-level statistics** such as spikes, blocks, aces, and errors across positions (**outside hitter**, **opposite**, **setter**, **middle blocker**, and **libero**), the project aims to understand which positions have the greatest impact on team performance and how positional balance affects international success.
+I am **Tuana İnci**, a IE student at **Sabancı University**, and this is my DSA210 Term Project.  
+The goal of this project is to analyze performance patterns in the **2025 Volleyball Nations League (VNL) Women’s Final Four**, focusing on how **different player positions contribute to team success** through measurable in-game statistics.  
 
-## Motivation
-In competitive volleyball, each position plays a unique and vital role in determining team outcomes.  
-This project is motivated by the following goals:
-- **Identify which positions contribute most** to overall team success.  
-- **Compare player performance** across elite national teams.  
-- **Analyze positional balance** between offensive and defensive roles.  
-- **Understand how performance metrics** (such as spikes and blocks) influence rankings and match results.  
-- **Highlight the efficiency patterns** that separate championship-level teams from others.  
+---
 
-## Data Source
-The primary dataset will be collected from the **official statistics** of the **2025 Volleyball Nations League (Women’s Tournament)**, available on the **Volleyball World** website.  
-Additional sources include:
-- **Volleybox.net** – For player positions, nationality, and background details.  
-  
+## Contents  
+- Motivation  
+- Project Goal  
+- Data and Data Analysis  
+- Files  
+- Methods and Analysis  
+- Hypothesis Testing  
+- Machine Learning  
+- Findings and Visualization  
+- Limitations  
+- Future Work  
+- Conclusion  
 
+---
 
-## Hypothesis Testing
-- **Positional Contribution Test:**  
-  - **H₀:** All positions contribute equally to team success.  
-  - **H₁:** Certain positions contribute more significantly to team performance.  
-  - **Method:** ANOVA and correlation analysis.  
-  - **Interpretation:** If *p-value < 0.05*, position-based differences are statistically significant.
+## Motivation  
+Volleyball is a sport where every position plays a unique and essential role.  
+I wanted to analyze how different positions — **Outside Hitters (OH)**, **Middle Blockers (MB)**, **Opposites (O)**, **Setters (S)**, and **Liberos (L)** — contribute to a team’s overall performance and outcomes in international tournaments.  
+This analysis aims to uncover which roles are most decisive in winning matches and how efficiency differs among teams at the highest level of competition.
 
-- **Team Performance Comparison Test:**  
-  - **H₀:** There is no difference in performance between the top national teams.  
-  - **H₁:** At least one team performs significantly better in key metrics.  
-  - **Method:** Independent t-tests and descriptive comparison.  
-  - **Interpretation:** If *p-value < 0.05*, performance differences are significant.
+---
 
-- **Efficiency–Ranking Relation Test:**  
-  - **H₀:** Spike efficiency and team ranking are not correlated.  
-  - **H₁:** Higher spike efficiency is positively correlated with better rankings.  
-  - **Method:** Correlation and regression analysis.  
-  - **Interpretation:** If *p-value < 0.05*, efficiency is a significant predictor of success.
+## Project Goal  
+The project aims to **quantify positional impact** using data from the **2025 VNL Women’s Final Four** (teams: *Italy, Brazil, Poland, Japan*).  
+The focus is on measuring player performance through metrics such as:
+- **Attack Points**
+- **Block Points**
+- **Serve Points**
+- **Efficiency (%)**
+- **Total Points**
 
-## Tools & Technologies
-- **Python**
-  - `pandas` – Data cleaning and organization  
-  - `numpy` – Statistical calculations and averages  
-- **Jupyter Notebook** – For analysis and visualization  
-- **Excel** – For initial data collection and manual preprocessing  
+The analysis evaluates how these variables vary across positions and teams, and whether certain roles contribute disproportionately to match outcomes.
 
-## Data Processing
-- **Data Cleaning:** Remove missing or inconsistent records from the dataset.  
-- **Standardizing Positions:** Unify position names (e.g., *OH*, *MB*, *OP*, *S*, *L*).  
-- **Data Integration:** Combine data from multiple sources (VNL website, Volleybox).  
-- **Feature Selection:** Focus on relevant variables such as spikes, blocks, aces, and efficiency.  
-- **Grouping and Aggregation:** Summarize player statistics by position and national team for analysis.  
+---
 
-## Data Analysis & Visualizations
-- **Positional Comparison:** Use **bar and box plots** to compare positional performance metrics across teams.  
-- **Team-Level Analysis:** Create **radar charts** to visualize overall team strengths and weaknesses.  
-- **Correlation Study:** Generate **heatmaps** to show relationships between efficiency, scoring, and errors.  
-- **Performance Distribution:** Use **violin and scatter plots** to analyze player contributions within positions.  
-- **Predictive Modeling (Future Work):** Build a **regression model** to estimate team ranking based on positional averages.  
+## Data and Data Analysis  
 
+The dataset was manually collected from **Volleyball World official match statistics** and includes all **semifinal, final, and 3rd-place matches** of the 2025 Women’s VNL.  
 
-## Limitations & Future Work
-- **Limited Dataset:** Only covers the 2025 VNL Women’s Tournament.  
-- **Data Availability:** Some player-level metrics may be incomplete.  
-- **Sample Size:** Analysis is limited to four national teams.  
-- **Future Work:**  
-  - Include more tournaments (e.g., Olympic Games, World Championships).  
-  - Automate data collection from official APIs.  
-  - Implement advanced machine learning models for ranking prediction.  
-  - Build an interactive visualization dashboard for real-time insights.  
+Each record in the dataset includes:
+- **Team**  
+- **Opponent**  
+- **Stage** (Semifinal, Final, or 3rd Place)  
+- **Player No & Name**  
+- **Position (OH, MB, O, S, L)**  
+- **Attack Points**  
+- **Block Points**  
+- **Serve Points**  
+- **Errors**  
+- **Efficiency (%)**  
+
+The dataset also includes team-level summaries such as:
+- **Attack**, **Block**, **Serve**, **Opponent Errors**, and **Total Points** per team.  
+
+These were compiled into two structured CSV files:
+1. `team_summary.csv` – aggregated statistics by team and match  
+2. `player_stats.csv` – detailed player-level records  
+
+---
+
+## Files  
+- `team_summary.csv` – team-level statistics from semifinals, finals, and 3rd place  
+- `player_stats.csv` – player-level performance data for all teams  
+- `VNL_Positional_Impact_Analysis.py` – Python analysis script  
+- `fig/` – folder containing generated visualizations  
+
+---
+
+## Methods and Analysis  
+
+### 1. Data Cleaning  
+- Converted numeric fields to proper data types  
+- Handled missing or inconsistent values  
+- Computed a new variable: **Total Points = Attack + Block + Serve**
+
+### 2. Exploratory Data Analysis (EDA)  
+- **Boxplot** → Distribution of total points by position  
+- **Bar Graph** → Average efficiency by position  
+- **Heatmap** → Correlation between attack, block, serve, and efficiency  
+- **Team Bar Plot** → Skill distribution (attack, block, serve) for each team  
+
+---
+
+## Hypothesis Testing  
+
+### Hypothesis 1: Positional Differences  
+**H₀:** All positions contribute equally to team success  
+**H₁:** At least one position contributes significantly more to total points  
+
+Test: **One-way ANOVA**  
+Result: p < 0.05 → Significant difference in scoring between positions  
+
+### Hypothesis 2: Attack vs. Block Impact  
+**H₀:** There is no difference between attack and block contributions  
+**H₁:** Attack contributions are significantly higher than block contributions  
+
+Test: **Paired t-test**  
+Result: p < 0.05 → Attack plays a more decisive role in scoring outcomes  
+
+---
+
+## Machine Learning  
+
+A **Linear Regression** model was implemented to predict total points using attack, block, and serve performance as input features.
+
+**Model:**  
+\[
+TotalPoints = β_0 + β_1(Attack) + β_2(Block) + β_3(Serve)
+\]
+
+**Metrics:**
+- Mean Squared Error (MSE): *low value → good fit*  
+- R² Score: *high value → strong predictive relationship*  
+
+This confirmed that a player’s total contribution can be linearly explained by their offensive and defensive performance metrics.
+
+---
+
+## Findings and Visualization  
+
+- **Outside Hitters (OH)** and **Opposites (O)** achieved the highest total points.  
+- **Middle Blockers (MB)** led in block contributions and efficiency.  
+- **Brazil** and **Italy** displayed the most balanced attack-block ratios.  
+- Attack, block, and serve metrics showed strong positive correlation with total points.  
+- Regression confirmed that these three skills predict scoring consistency well.  
+
+---
+
+## Limitations  
+- The dataset covers only **four national teams** from a single tournament (VNL 2025).  
+- Player-level metrics may not include **defensive digs** or **receiving efficiency**, which affect real performance.  
+- Sample size limits generalization to broader contexts.  
+
+---
+
+## Future Work  
+- Incorporate **additional tournaments** (e.g., Olympic Games, World Championships).  
+- Expand dataset to include **defensive and reception metrics**.  
+- Develop a **machine learning classification model** predicting match winners.  
+- Create an **interactive dashboard** for real-time performance visualization.  
+
+---
+
+## Conclusion  
+This project reveals that **offensive roles (OH and O)** contribute most heavily to team scoring, while **blocking and serving efficiency** from **MBs and Setters** also play critical roles in team success.  
+By combining statistical testing and regression modeling, the analysis highlights how positional balance shapes outcomes at the elite international level of volleyball.
