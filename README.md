@@ -7,17 +7,17 @@ The goal of this project is to analyze performance patterns in the **2025 Volley
 ---
 
 ## Contents  
-- [Motivation](##motivation)
-- [Project Goal](##project-goal)
-- [Data and Data Analysis](##data-and-data-analysis)
-- [Files](##files)
-- [Methods and Analysis](##methods-and-analysis)
-- [Hypothesis Testing](##hypothesis-testing)
-- [Machine Learning](##machine-learning)
-- [Findings and Visualization](##findings-and-visualization)
-- [Limitations](##limitations)
-- [Future Work](##future-work)
-- [Conclusion](##conclusion)
+- [Motivation](#motivation)
+- [Project Goal](#project-goal)
+- [Data and Data Analysis](#data-and-data-analysis)
+- [Files](#files)
+- [Methods and Analysis](#methods-and-analysis)
+- [Hypothesis Testing](#hypothesis-testing)
+- [Machine Learning](#machine-learning)
+- [Findings and Visualization](#findings-and-visualization)
+- [Limitations](#limitations)
+- [Future Work](#future-work)
+- [Conclusion](#conclusion)
 
 ---
 
