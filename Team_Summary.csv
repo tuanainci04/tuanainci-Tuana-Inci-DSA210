@@ -1,0 +1,24 @@
+Match,Team,Opponent,Result,Attack,Block,Serve,Opponent Error,Total,Best Scorers
+Italy vs USA (Quarterfinal),Italy,USA,W,50,6,5,17,78,"Egonu (17), Antropova (9)"
+Italy vs USA (Quarterfinal),USA,Italy,L,36,6,4,23,69,"Skinner (11), Franklin (7)"
+
+Poland vs China (Quarterfinal),Poland,China,W,52,15,2,30,99,"Stysiak (18), Korneluk (16)"
+Poland vs China (Quarterfinal),China,Poland,L,52,2,2,24,80,"Shimamura (15), Ishikawa (12)"
+
+Brazil vs Germany (Quarterfinal),Brazil,Germany,W,58,13,4,26,101,"Gabi (20), Bergmann (18)"
+Brazil vs Germany (Quarterfinal),Germany,Brazil,L,49,10,3,22,84,"Alsmeier (14), Orthmann (11)"
+
+Japan vs Türkiye (Quarterfinal),Japan,Türkiye,W,61,6,5,31,103,"Ishikawa (19), Wada (15)"
+Japan vs Türkiye (Quarterfinal),Türkiye,Japan,L,57,13,2,28,100,"Vargas (22), Erdem (17)"
+
+Italy vs Poland (Semi),Italy,Poland,W,51,11,3,10,75,"Egonu (17), Degradi (13)"
+Italy vs Poland (Semi),Poland,Italy,L,30,6,1,11,48,"Korneluk (11), Smarzek (9)"
+
+Brazil vs Japan (Semi),Brazil,Japan,W,69,14,2,22,107,"Gabi (25), Bergmann (24)"
+Brazil vs Japan (Semi),Japan,Brazil,L,62,9,3,23,97,"Wada (20), Ishikawa (19)"
+
+Italy vs Brazil (Final),Italy,Brazil,W,58,14,3,22,97,"Antropova (18), Sylla (16)"
+Italy vs Brazil (Final),Brazil,Italy,L,45,12,2,28,87,"Gabi (15), Julia (12)"
+
+Poland vs Japan (3rd),Poland,Japan,W,52,15,2,30,99,"Stysiak (18), Korneluk (16)"
+Poland vs Japan (3rd),Japan,Poland,L,52,2,2,24,80,"Shimamura (15), Ishikawa (12)"
