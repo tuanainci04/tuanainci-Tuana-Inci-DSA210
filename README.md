@@ -65,15 +65,15 @@ The dataset also includes team-level summaries such as:
 - **Attack**, **Block**, **Serve**, **Opponent Errors**, and **Total Points** per team.  
 
 These were compiled into two structured CSV files:
-1. `team_summary.csv` – aggregated statistics by team and match  
-2. `player_stats.csv` – detailed player-level records  
+1. `Team_summary.csv` – aggregated statistics by team and match  
+2. `Player_stats.csv` – detailed player-level records  
 
 ---
 
 ## Files  
-- `team_summary.csv` – team-level statistics from semifinals, finals, and 3rd place  
-- `player_stats.csv` – player-level performance data for all teams  
-- `VNL_Positional_Impact_Analysis.py` – Python analysis script  
+- `Team_Summary.csv` – team-level statistics from semifinals, finals, and 3rd place  
+- `Player_Stats.csv` – player-level performance data for all teams  
+- `Tuana_İnci_DSA-2.ipynb` – Python analysis script  
 - `fig/` – folder containing generated visualizations  
 
 ---
@@ -86,10 +86,10 @@ These were compiled into two structured CSV files:
 - Computed a new variable: **Total Points = Attack + Block + Serve**
 
 ### 2. Exploratory Data Analysis (EDA)  
-- **Boxplot** → Distribution of total points by position  
-- **Bar Graph** → Average efficiency by position  
-- **Heatmap** → Correlation between attack, block, serve, and efficiency  
-- **Team Bar Plot** → Skill distribution (attack, block, serve) for each team  
+- **Boxplot** → This box plot visualizes the distribution of player efficiency values for each team.
+- **Historgam** → This histogram shows how player efficiency values are distributed across all matches.
+ - **Heatmap** → This heatmap shows the average Attack, Block, and Serve points for each team across all matches.
+- **Team Bar Chart** → This bar chart shows the total points scored by each team per match, including attack, block, serve, and opponent errors.  
 
 ---
 
@@ -123,7 +123,7 @@ The target variable is:
 **Player Efficiency (%)**
 The regression model follows the equation:
 \[
-TotalPoints = β_0 + β_1(Attack) + β_2(Block) + β_3(Serve)
+Efficiency = β_0 + β_1(Attack) + β_2(Block) + β_3(Serve)
 \]
 
  **Metrics:**
@@ -147,12 +147,60 @@ Interpretation:
 This visualization helps compare overall team strength across core volleyball skills. Teams with balanced values across attack, block, and serve generally performed better in match outcomes.
 ![image alt](heatgraph.png)
 
- 
+**2. Player Efficiency Distribution (Box Plot)**
+Figure: Player Efficiency Distribution
+This box plot visualizes the distribution of player efficiency values for each team.
+
+**Observations:**
+
+Italy has the highest median efficiency and a narrow spread, indicating consistency.
+Brazil shows high variance, meaning some players performed extremely well while others did not.
+Poland and Japan demonstrate moderate consistency.
+USA and Türkiye have wider spreads and lower medians, indicating performance instability.
+Interpretation:
+Box plots allow us to compare performance consistency between teams. A narrower distribution reflects more reliable team performance.
+
+ **3. Total Points by Team (Bar Chart)**
+Figure: Total Points by Team
+This bar chart shows the total points scored by each team per match, including attack, block, serve, and opponent errors.
+
+**Observations:**
+Italy and Brazil consistently score the highest total points.
+Japan also shows strong totals, especially in matches they won.
+USA and Türkiye have lower totals, especially in elimination matches.
+Interpretation:
+This chart highlights overall match dominance and scoring capacity. Teams with higher totals generally controlled match tempo and outcomes.
+
+**4. Distribution of Player Efficiency (Histogram)**
+Figure: Distribution of Player Efficiency
+This histogram shows how player efficiency values are distributed across all matches.
+**Observations:**
+Most efficiency values cluster between 10–20.
+A few low-efficiency outliers exist, representing limited playing time or performance drops.
+The distribution slightly skews right, showing that strong performances are more frequent than poor ones.
+Interpretation:
+This distribution indicates that most players performed at a competitive level, with a few standout performances driving match results.
+
+**5. Machine Learning: Actual vs Predicted Efficiency**
+
+Figure: Machine Learning – Actual vs Predicted Efficiency
+This scatter plot compares:
+Actual player efficiency values
+Predicted efficiency values generated using a simple regression model
+A dashed diagonal line represents perfect prediction accuracy.
+
+**Observations:**
+
+Points closer to the diagonal indicate better prediction accuracy.
+Some deviations occur due to limited dataset size and match-specific variability.
+Overall trend shows that the model captures general efficiency behavior.
+Interpretation:
+The machine learning model provides a reasonable approximation of player efficiency trends. While not perfect, it demonstrates how historical match statistics can be used to predict performance outcomes.
 
 ---
 
 ## Limitations  
-- The dataset covers only **four national teams** from a single tournament (VNL 2025).  
+- The dataset covers only **eight national teams** from a single tournament (VNL 2025).  
 - Player-level metrics may not include **defensive digs** or **receiving efficiency**, which affect real performance.  
 - Sample size limits generalization to broader contexts.  
 
@@ -167,5 +215,5 @@ This visualization helps compare overall team strength across core volleyball sk
 ---
 
 ## Conclusion  
-This project reveals that **offensive roles (OH and O)** contribute most heavily to team scoring, while **blocking and serving efficiency** from **MBs and Setters** also play critical roles in team success.  
-By combining statistical testing and regression modeling, the analysis highlights how positional balance shapes outcomes at the elite international level of volleyball.
+This project analyzed performance patterns in the 2025 VNL Women’s Final eight using statistical and machine learning methods. The results show that attack efficiency is the strongest contributor to overall team success, while block and serve performance provide supportive impact.
+The visualizations helped compare team performances clearly, and the machine learning model demonstrated that player efficiency can be reasonably predicted using basic performance metrics. Although the dataset is limited, the findings highlight how data-driven analysis can support performance evaluation in professional volleyball.
