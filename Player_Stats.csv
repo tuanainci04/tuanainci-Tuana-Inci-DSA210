@@ -1,0 +1,42 @@
+Match,Team,Player,Position,Attack Points,Block Points,Serve Points,Efficiency %
+Italy vs Poland (Semi),Italy,Egonu,O,15,1,1,21.57
+Italy vs Poland (Semi),Italy,Degradi,OH,13,0,0,27.78
+Italy vs Poland (Semi),Italy,Fahr,MB,6,3,0,5.00
+Italy vs Poland (Semi),Poland,Korneluk,MB,6,5,0,12.90
+Italy vs Poland (Semi),Poland,Smarzek,O,7,1,1,20.00
+
+Brazil vs Japan (Semi),Brazil,Gabi,OH,24,1,0,18.67
+Brazil vs Japan (Semi),Brazil,Bergmann,OH,23,1,0,17.11
+Brazil vs Japan (Semi),Japan,Wada,OH,19,1,0,12.70
+Brazil vs Japan (Semi),Japan,Ishikawa,OH,17,1,1,13.70
+
+Italy vs Brazil (Final),Italy,Antropova,O,13,4,1,15.91
+Italy vs Brazil (Final),Italy,Sylla,OH,13,3,0,9.43
+Italy vs Brazil (Final),Brazil,Gabi,OH,10,4,1,1.56
+Italy vs Brazil (Final),Brazil,Julia,MB,7,5,0,2.17
+
+Poland vs Japan (3rd),Poland,Stysiak,O,16,2,0,18.97
+Poland vs Japan (3rd),Poland,Korneluk,MB,8,8,0,12.50
+Poland vs Japan (3rd),Japan,Shimamura,MB,13,2,0,10.00
+Poland vs Japan (3rd),Japan,Ishikawa,OH,12,0,0,-8.62
+
+Japan vs Türkiye (Quarterfinal),Japan,Ishikawa,OH,17,0,2,7.04
+Japan vs Türkiye (Quarterfinal),Japan,Wada,OH,15,0,0,5.08
+Japan vs Türkiye (Quarterfinal),Japan,Yoshino,OH,13,1,1,-3.33
+Japan vs Türkiye (Quarterfinal),Japan,Airi,MB,6,3,1,13.95
+
+Japan vs Türkiye (Quarterfinal),Türkiye,Vargas,O,22,3,0,20.00
+Japan vs Türkiye (Quarterfinal),Türkiye,Erkek,OH,17,2,2,22.22
+Japan vs Türkiye (Quarterfinal),Türkiye,Güneş,MB,10,2,0,3.45
+Japan vs Türkiye (Quarterfinal),Türkiye,Kalaç,MB,4,7,0,14.89
+
+Italy vs USA (Quarterfinal),Italy,Egonu,O,17,1,2,18.87
+Italy vs USA (Quarterfinal),Italy,Antropova,O,7,1,1,19.23
+Italy vs USA (Quarterfinal),Italy,Danesi,MB,6,2,0,16.67
+Italy vs USA (Quarterfinal),Italy,Fahr,MB,6,2,0,9.09
+Italy vs USA (Quarterfinal),Italy,Degradi,OH,6,0,0,2.78
+
+Italy vs USA (Quarterfinal),USA,Skinner,OH,11,0,0,6.25
+Italy vs USA (Quarterfinal),USA,Franklin,OH,7,1,0,-10.00
+Italy vs USA (Quarterfinal),USA,Rettke,MB,5,1,1,11.43
+Italy vs USA (Quarterfinal),USA,Samedy,O,6,0,1,7.41
