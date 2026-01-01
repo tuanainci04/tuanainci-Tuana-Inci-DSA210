@@ -2,7 +2,7 @@
 ## Volleyball Positional Impact Analysis  
 
 I am **Tuana İnci**, a IE student at **Sabancı University**, and this is my DSA210 Term Project.  
-The goal of this project is to analyze performance patterns in the **2025 Volleyball Nations League (VNL) Women’s Final Four**, focusing on how **different player positions contribute to team success** through measurable in-game statistics.  
+The goal of this project is to analyze performance patterns in the **2025 Volleyball Nations League (VNL) Women’s Final Rounds **, focusing on how **different player positions contribute to team success** through measurable in-game statistics.  
 
 ---
 
@@ -29,7 +29,13 @@ This analysis aims to uncover which roles are most decisive in winning matches a
 ---
 
 ## Project Goal  
-The project aims to **quantify positional impact** using data from the **2025 VNL Women’s Final Four** (teams: *Italy, Brazil, Poland, Japan*).  
+This project analyzes player and team performance in the 2025 Volleyball Nations League (VNL) Women’s Final Stage, focusing on how different playing positions contribute to match success.
+The analysis is based on eight matches:
+4 Quarterfinals
+2 Semifinals
+1 Third-place match
+1 Final
+The goal is to evaluate how offensive and defensive contributions (attack, block, serve) affect team outcomes, and to explore whether player efficiency can be predicted using machine learning.
 The focus is on measuring player performance through metrics such as:
 - **Attack Points**
 - **Block Points**
@@ -37,13 +43,11 @@ The focus is on measuring player performance through metrics such as:
 - **Efficiency (%)**
 - **Total Points**
 
-The analysis evaluates how these variables vary across positions and teams, and whether certain roles contribute disproportionately to match outcomes.
-
 ---
 
 ## Data and Data Analysis  
 
-The dataset was manually collected from **Volleyball World official match statistics** and includes all **semifinal, final, and 3rd-place matches** of the 2025 Women’s VNL.  
+The dataset was manually collected from **Volleyball World official match statistics** and includes all **quarterfinal, semifinal, final, and 3rd-place matches** of the 2025 Women’s VNL.  
 
 Each record in the dataset includes:
 - **Team**  
@@ -107,16 +111,22 @@ Result: p < 0.05 → Attack plays a more decisive role in scoring outcomes
 
 ---
 
-## Machine Learning  
-
-A **Linear Regression** model was implemented to predict total points using attack, block, and serve performance as input features.
-
-**Model:**  
+## Machine Learning
+In this project, a Linear Regression model was implemented to analyze and predict player efficiency based on match performance statistics.
+The goal was to understand how well individual performance metrics explain overall efficiency across different teams and matches.
+Model Description
+The model uses the following features as inputs:
+Attack Points
+Block Points
+Serve Points
+The target variable is:
+**Player Efficiency (%)**
+The regression model follows the equation:
 \[
 TotalPoints = β_0 + β_1(Attack) + β_2(Block) + β_3(Serve)
 \]
 
-**Metrics:**
+ **Metrics:**
 - Mean Squared Error (MSE): *low value → good fit*  
 - R² Score: *high value → strong predictive relationship*  
 
@@ -124,13 +134,20 @@ This confirmed that a player’s total contribution can be linearly explained by
 
 ---
 
-## Findings and Visualization  
+## Findings and Visualization
+This section presents the visual analysis of the volleyball match data collected from the **quarter-finals, semi-finals, third-place match, and final**, totaling **8 matches**. The visualizations aim to highlight team performance, player efficiency, and predictive patterns using basic machine learning techniques.
+**1. Average Team Performance Heatmap**
+This heatmap shows the average Attack, Block, and Serve points for each team across all matches.
+Observations:
+Brazil and Italy show the highest average attack values, confirming their offensive dominance throughout the tournament.
+Japan demonstrates balanced performance, especially in defense-related metrics.
+Türkiye shows strong blocking performance compared to other teams.
+USA has lower averages overall, especially in attack and serve metrics.
+Interpretation:
+This visualization helps compare overall team strength across core volleyball skills. Teams with balanced values across attack, block, and serve generally performed better in match outcomes.
+![image alt](heatgraph.png)
 
-- **Outside Hitters (OH)** and **Opposites (O)** achieved the highest total points.  
-- **Middle Blockers (MB)** led in block contributions and efficiency.  
-- **Brazil** and **Italy** displayed the most balanced attack-block ratios.  
-- Attack, block, and serve metrics showed strong positive correlation with total points.  
-- Regression confirmed that these three skills predict scoring consistency well.  
+ 
 
 ---
 
