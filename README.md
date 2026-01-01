@@ -160,6 +160,8 @@ USA and Türkiye have wider spreads and lower medians, indicating performance in
 Interpretation:
 Box plots allow us to compare performance consistency between teams. A narrower distribution reflects more reliable team performance.
 
+![image alt](boxplot.png)
+
  **3. Total Points by Team (Bar Chart)**
 Figure: Total Points by Team
 This bar chart shows the total points scored by each team per match, including attack, block, serve, and opponent errors.
@@ -171,6 +173,8 @@ USA and Türkiye have lower totals, especially in elimination matches.
 Interpretation:
 This chart highlights overall match dominance and scoring capacity. Teams with higher totals generally controlled match tempo and outcomes.
 
+![image alt](bargraph.png)
+
 **4. Distribution of Player Efficiency (Histogram)**
 Figure: Distribution of Player Efficiency
 This histogram shows how player efficiency values are distributed across all matches.
@@ -181,6 +185,8 @@ The distribution slightly skews right, showing that strong performances are more
 Interpretation:
 This distribution indicates that most players performed at a competitive level, with a few standout performances driving match results.
 
+![image alt](histogram.png)
+
 **5. Machine Learning: Actual vs Predicted Efficiency**
 
 Figure: Machine Learning – Actual vs Predicted Efficiency
@@ -188,7 +194,7 @@ This scatter plot compares:
 Actual player efficiency values
 Predicted efficiency values generated using a simple regression model
 A dashed diagonal line represents perfect prediction accuracy.
-
+      (Machine Learning.png)
 **Observations:**
 
 Points closer to the diagonal indicate better prediction accuracy.
@@ -196,6 +202,8 @@ Some deviations occur due to limited dataset size and match-specific variability
 Overall trend shows that the model captures general efficiency behavior.
 Interpretation:
 The machine learning model provides a reasonable approximation of player efficiency trends. While not perfect, it demonstrates how historical match statistics can be used to predict performance outcomes.
+
+![image alt](MachineLearning.png)   
 
 ---
 
