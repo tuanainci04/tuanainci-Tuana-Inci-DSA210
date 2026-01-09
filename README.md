@@ -112,25 +112,51 @@ Result: p < 0.05 → Attack plays a more decisive role in scoring outcomes
 ---
 
 ## Machine Learning
-In this project, a Linear Regression model was implemented to analyze and predict player efficiency based on match performance statistics.
-The goal was to understand how well individual performance metrics explain overall efficiency across different teams and matches.
-Model Description
-The model uses the following features as inputs:
-Attack Points
-Block Points
-Serve Points
-The target variable is:
-**Player Efficiency (%)**
-The regression model follows the equation:
-\[
-Efficiency = β_0 + β_1(Attack) + β_2(Block) + β_3(Serve)
-\]
 
- **Metrics:**
-- Mean Squared Error (MSE): *low value → good fit*  
-- R² Score: *high value → strong predictive relationship*  
+To extend the analysis beyond descriptive statistics and match-based comparisons, a machine learning regression model was developed to predict player efficiency scores using their performance metrics.
+**Problem Definition**
+**Task:** Predict player efficiency
+**Type:** Supervised regression
+**Target Variable:** Efficiency %
+**Input Features:**
+-Attack Points
+-Block Points
+-Serve Points
+These features reflect the core components of individual scoring contribution and allow the model to learn how offensive and defensive skills translate into overall efficiency.
 
-This confirmed that a player’s total contribution can be linearly explained by their offensive and defensive performance metrics.
+**Models Implemented**
+**1. Linear Regression (Baseline Model)**
+
+Used as the first step to examine whether efficiency can be explained through a simple linear combination of attack, block, and serve points.
+
+**2. Random Forest Regressor (Non-Linear Model)**
+
+Implemented to capture more complex, non-linear interactions between skills and efficiency that a linear model cannot detect.
+
+**Model Evaluation**
+**Evaluation Metrics**
+-Mean Squared Error (MSE)
+-R² Score
+These metrics measure how closely the predicted efficiencies match real match performance.
+
+**Linear Regression Results**
+MSE: Moderate error
+R² Score: Low to moderate predictive power
+The linear model struggled to fully capture variation in efficiency, suggesting that player performance is influenced by more complex factors than just linear relationships between scoring elements.
+
+**Random Forest Regressor Results**
+**MSE:** Lower error compared to linear regression
+**R² Score:** Noticeably higher
+**Best Predictions:**
+Middle blockers with consistent block/serve contributions
+Outside hitters with balanced scoring profiles
+The Random Forest model performed significantly better, indicating that non-linear interactions between attack, block, and serve metrics are key to modeling real efficiency.
+
+**Interpretation**
+The machine learning results reveal that:
+Efficiency is not purely linear—players with similar attack totals can differ widely depending on block and serve performance.
+Non-linear models provide a more realistic representation of player contribution.
+This approach can be expanded in the future using more features such as errors, playtime, or pass reception quality.
 
 ---
 
