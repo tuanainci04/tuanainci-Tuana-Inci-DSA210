@@ -1,5 +1,5 @@
 # DSA210 Term Project  
-## Volleyball Positional Impact Analysis  
+## Statistical Evaluation of Performance Metrics Across Positions in International Women’s Volleyball 
 
 I am **Tuana İnci**, a IE student at **Sabancı University**, and this is my DSA210 Term Project.  
 The goal of this project is to analyze performance patterns in the **2025 Volleyball Nations League (VNL) Women’s Final Rounds **, focusing on how **different player positions contribute to team success** through measurable in-game statistics.  
