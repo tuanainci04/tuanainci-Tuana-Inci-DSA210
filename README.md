@@ -125,6 +125,7 @@ To extend the analysis beyond descriptive statistics and match-based comparisons
 These features reflect the core components of individual scoring contribution and allow the model to learn how offensive and defensive skills translate into overall efficiency.
 
 **Models Implemented**
+
 **1. Linear Regression (Baseline Model)**
 
 Used as the first step to examine whether efficiency can be explained through a simple linear combination of attack, block, and serve points.
